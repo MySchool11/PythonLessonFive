@@ -38,5 +38,27 @@ September:  {1}
 October:    {2}
 November:   {1}
 December:   {2}""".format(28, 30, 31) + "\n")
-# the triple quotes, of course, maintain the formatting from the code
+# the triple quotes, of course, maintain the formatting from the code, note the same variable can be used multiple times
+
+# string formatting operator (deprecated - you can use it but it is not recommended in Python 3)
+print("My age is %d years." % age)
+print("My age is %d %s, %d %s." % (age, "years", 7, "months"))
+# the letter following the % must relate to the data type you wish to put there, the list of type is:
+# %d    signed integer decimal
+# %i    signed integer decimal
+# %o    signed octal
+# %u    unsigned decimal
+# %x    unsigned hexadecimal (lowercase e.g. 3de3d)
+# %X    unsigned hexadeicmal (uppercase e.g. 3DE3D)
+# %e    floating point exponential format (lowercase e.g. 1.00e+02)
+# %E    floating point exponential format (uppercase e.g. 1.00E+02)
+# %f    floating point decimal format
+# %F    floating point decimal format
+# %g    same as "e" if exponent is greater than -4 or less than precision (otherwise f)
+# %G    same as "E" if exponent is greater than -4 or less than precision (otherwise E)
+# %c    Single character (char)
+# %r    string (python object converted with %repr())
+# %s    string (python object converted with %str())
+# %     No argument just give a % character in the result
+# now you can see why this method is deprecated (talk about confusing!!)
 
