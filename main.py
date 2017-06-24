@@ -21,6 +21,22 @@ months2S[2]) + "\n")
 # as you can see, very helpful
 
 # replacement fields can mix and match variable types
-print("Pi = {0}, so said {1} around {2} B.C.".format(3.141592654, "Archimedes of Syracuse", 210) + "\n")
+print("Pi == {0}, so said {1} around {2} B.C.".format(3.141592654, "Archimedes of Syracuse", 210) + "\n")
 # here we have a double, a string and an integer
+
+# triple quotes can also be useful when formatting groups of string data
+print("""Days in the months -->\n
+January:    {2}
+February:   {0}
+March:      {2}
+April:      {1}
+May:        {2}
+June:       {1}
+July:       {2}
+August:     {2}
+September:  {1}
+October:    {2}
+November:   {1}
+December:   {2}""".format(28, 30, 31) + "\n")
+# the triple quotes, of course, maintain the formatting from the code
 
