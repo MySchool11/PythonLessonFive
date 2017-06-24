@@ -1,5 +1,7 @@
 __author__ = "Mr Bancroft"
 
+import math
+
 # str function
 age = 37
 print("My age is " + str(age) + " years.\n")
@@ -61,4 +63,12 @@ print("My age is %d %s, %d %s." % (age, "years", 7, "months"))
 # %s    string (python object converted with %str())
 # %     No argument just give a % character in the result
 # now you can see why this method is deprecated (talk about confusing!!)
+# this old method could also be used to allocate space for the outputs
+for i in range(1, 12):
+    print("No. %2d squared is %4d and cubed is %4d." % (i, i ** 2, i ** 3))
+# specify precision by:
+print("\nPi is approximately (5 decimal places) %.5f" % math.pi)
+print("\nPi is approximately (10 decimal places) %.10f" % math.pi)
+# now you know these string formatters DO NOT USE THEM. Just be aware of them because Python 2 code may use them
+
 
