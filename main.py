@@ -42,6 +42,10 @@ November:   {1}
 December:   {2}""".format(28, 30, 31) + "\n")
 # the triple quotes, of course, maintain the formatting from the code, note the same variable can be used multiple times
 
+# to make things even easier you can omit the numbers if you do not need repeating instances of a variable
+print("I {} Python because it is {} to understand, like {} + {} = {}".format("love", "easy", 1, 2, 3) + "\n")
+# you cannot however mix {0} and {} in a string you either number them or you do not
+
 # string formatting operator (deprecated - you can use it but it is not recommended in Python 3)
 print("My age is %d years." % age)
 print("My age is %d %s, %d %s." % (age, "years", 7, "months"))
