@@ -46,6 +46,9 @@ December:   {2}""".format(28, 30, 31) + "\n")
 print("I {} Python because it is {} to understand, like {} + {} = {}".format("love", "easy", 1, 2, 3) + "\n")
 # you cannot however mix {0} and {} in a string you either number them or you do not
 
+# you can also use keywords in the {} declarations for reused constants
+print("Python is a {std} language, which uses many {std}s.".format(std = "standard") + "\n")
+
 # string formatting operator (deprecated - you can use it but it is not recommended in Python 3)
 print("My age is %d years." % age)
 print("My age is %d %s, %d %s." % (age, "years", 7, "months"))
@@ -67,7 +70,7 @@ print("My age is %d %s, %d %s." % (age, "years", 7, "months"))
 # %s    string (python object converted with %str())
 # %     No argument just give a % character in the result
 # now you can see why this method is deprecated (talk about confusing!!)
-# this old method could also be used to allocate space for the outputs
+# this old method could also be used to allocate space for the outputs (padding)
 for i in range(1, 12):
     print("No. %2d squared is %4d and cubed is %4d." % (i, i ** 2, i ** 3))
 # specify precision by:
@@ -75,4 +78,16 @@ print("\nPi is approximately (5 decimal places) %.5f" % math.pi)
 print("\nPi is approximately (10 decimal places) %.10f" % math.pi)
 # now you know these string formatters DO NOT USE THEM. Just be aware of them because Python 2 code may use them
 
-
+# you can use the same string tools with the newer replacement field method
+# padding
+print("Ten spaces for padding left {:>10} padding".format("test"))
+print("Ten spaces for padding right {:10} padding".format("test"))
+# new padding operators unavailable using the deprecated method
+print("Ten _ symbols for padding left {:_>10}".format("test"))
+print("Ten _ symbols for padding right {:_<10}".format("test"))
+print("Centering output in 10 spaces {:^10} of a string".format("test"))
+# precision specification
+print("\nPi is approximately (5 decimal places) {:.5f}".format(math.pi))
+print("\nPi is approximately (5 decimal places) {:.{prec}f}".format(math.pi, prec=5))
+# padding and precision specification
+print("\nPi is approximately (5 decimal placez) {:>10.5f}".format(math.pi))
