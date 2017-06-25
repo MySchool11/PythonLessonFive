@@ -86,8 +86,17 @@ print("Ten spaces for padding right {:10} padding".format("test"))
 print("Ten _ symbols for padding left {:_>10}".format("test"))
 print("Ten _ symbols for padding right {:_<10}".format("test"))
 print("Centering output in 10 spaces {:^10} of a string".format("test"))
-# precision specification
+# precision specification (the f tells Python the operator applies to the floating part of the number is omitted it will
+# print "3.1515" as it applies the operator to the total numbers displayed
 print("\nPi is approximately (5 decimal places) {:.5f}".format(math.pi))
 print("\nPi is approximately (5 decimal places) {:.{prec}f}".format(math.pi, prec=5))
 # padding and precision specification
 print("\nPi is approximately (5 decimal placez) {:>10.5f}".format(math.pi))
+# So use these, just be aware you may see the other way
+# Just to mention you can use the numbered approach too, just insert it before the : like so
+print("\nPi is approximately (10 decimal places) {0:>10.10f}".format(math.pi))
+# this of course can be used to insert many variables one or more times
+
+
+
+
